@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Header = styled.div`
     margin: 0;
-    background-color: #231F20;
+    background-color: var(--background);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@ export const Description = styled.h1`
     color: white;
     position: absolute;
     width: 400px;
-    height: 129px;
+    height: 100px;
     right: 60%;
     top: 30%;
 
@@ -27,5 +27,5 @@ export const Image = styled.img`
     width: 550px;
     height: 329px;
     left: 50%;
-    top: 30%;
+    top: 40%;
 `;
