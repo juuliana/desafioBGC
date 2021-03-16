@@ -1,3 +1,9 @@
+:root {
+  --background: #231F20;
+  --yellow: #FCE029;
+  --blue: #0A75BC;
+}
+
 body {
     margin: 0;
     font-family: 'Baumans', cursive;
