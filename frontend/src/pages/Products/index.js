@@ -13,16 +13,19 @@ function Products() {
           title='Minions remoto'
           imageUrl={minions}
           body='Leve já o seu minions remoto!'
+          price='R$100,00'
         />
         <Card
           title='Minions remoto'
           imageUrl={minions}
           body='Leve já o seu minions remoto!'
+          price='R$100,00'
         />
         <Card
           title='Minions remoto'
           imageUrl={minions}
           body='Leve já o seu minions remoto!'
+          price='R$100,00'
         />
       </ProductsGrid>
     </Header>
