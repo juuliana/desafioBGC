@@ -16,8 +16,6 @@ export const Description = styled.h1`
     right: 60%;
     top: 30%;
 
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 43px;
 `;
