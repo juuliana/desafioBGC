@@ -32,11 +32,13 @@ export const Information = styled.div`
 `;
 
 export const Title = styled.h2`
+    text-align: center;
     margin-bottom: 0.5rem;
     font-size: 15px;
 `;
 
 export const Description = styled.h2`
+    text-align: center;
     margin-bottom: 0.5rem;
     font-size: 15px;
 `;
@@ -48,6 +50,7 @@ export const Button = styled.button`
     width: 100%;
     margin: 0.rem;
     color: white;
+    border: 1px solid var(--blue);
     transition: 0.6s;
     animation: ease-in-out;
 
@@ -55,4 +58,10 @@ export const Button = styled.button`
         transform: scale(1.1);
         box-shadow: 0 0 10 0;
     }
+`;
+
+export const Price = styled.h2`
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+    text-align: center;
 `;

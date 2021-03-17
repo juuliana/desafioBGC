@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, ContainerImage, Image, Information, Title, Description, Button } from './styles';
+import { Container, ContainerImage, Image, Information, Title, Description, Button, Price } from './styles';
 
-export default function Card({title, imageUrl, body}){
+export default function Card({title, imageUrl, body, price}){
     return(
         <Container>
             <ContainerImage>
@@ -15,6 +15,9 @@ export default function Card({title, imageUrl, body}){
                 <Description>
                     <p>{body}</p>
                 </Description>
+                <Price>
+                    <p>{price}</p>
+                </Price>
             </Information>
 
             <Button>Adicionar ao carrinho</Button>
