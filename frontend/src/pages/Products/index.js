@@ -1,11 +1,10 @@
 import React from 'react';
 import { Header, ProductsGrid } from './styles';
-import Card from '../../components/Card';
 
+import Card from '../../components/Card';
 import minions from '../../images/product1.jpg';
 
 function Products() {
-
   return (
     <Header>
       <ProductsGrid>
