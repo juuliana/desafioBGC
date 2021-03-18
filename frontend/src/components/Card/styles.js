@@ -5,7 +5,7 @@ export const Container = styled.div`
     margin-left: 10%;
     width: 250px;
     overflow: hidden;
-    box-shadow: 0 0 15 -5;
+    border-radius: 20px;
     transition: 0.5s;
     animation: ease-in-out;
 
@@ -13,6 +13,22 @@ export const Container = styled.div`
         transform: scale(1.2);
         box-shadow: 0 0 15 0;
     }
+`;
+
+export const Header = styled.div`
+    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const ProductsGrid = styled.section`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1500px;
+    padding: 50px;
+    margin-left: 5%;
+    grid-gap: 20px;
 `;
 
 export const ContainerImage = styled.div`
@@ -43,6 +59,12 @@ export const Description = styled.h2`
     font-size: 15px;
 `;
 
+export const Price = styled.h2`
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+    text-align: center;
+`;
+
 export const Button = styled.button`
     background-color: var(--blue);
     display: flex;
@@ -53,15 +75,10 @@ export const Button = styled.button`
     border: 1px solid var(--blue);
     transition: 0.6s;
     animation: ease-in-out;
+    text-decoration: none;
 
     :hover{
         transform: scale(1.1);
         box-shadow: 0 0 10 0;
     }
-`;
-
-export const Price = styled.h2`
-    margin-bottom: 0.5rem;
-    font-size: 15px;
-    text-align: center;
 `;
