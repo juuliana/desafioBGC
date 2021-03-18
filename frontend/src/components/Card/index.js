@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, ContainerImage, Image, Information, Title, Description, Button, Price } from './styles';
 
 export default function Card({title, imageUrl, body, price}){
@@ -20,7 +21,7 @@ export default function Card({title, imageUrl, body, price}){
                 </Price>
             </Information>
 
-            <Button>Adicionar ao carrinho</Button>
+            <Button as={Link} to="/ShoppingCart">Adicionar ao carrinho</Button>
         </Container>
     );
 }
