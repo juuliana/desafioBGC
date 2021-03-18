@@ -5,13 +5,13 @@ export default function Menu(){
     return(
         <Nav>
             <NavLink to='/'>
-                HOME
+                Home    
             </NavLink>
             <NavLink to='/Login'>
-                LOGIN
+                Login
             </NavLink>
-            <NavLink to='/carrinho'>
-                CARRINHO
+            <NavLink to='/ShoppingCart'>
+                Carrinho
             </NavLink>
         </Nav>
     );
