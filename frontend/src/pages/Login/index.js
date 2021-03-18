@@ -1,15 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
-import Menu from '../../components/Menu';
-
 import { Header, Title, Form, Input, Button } from './styles';
+
+import Menu from '../../components/Menu';
 
 function Login() {
   return (
     <>
-      <Router>
-        <Menu/>
-      </Router>
+      <Menu/>
 
       <Header>
         <Title>Faça seu acesso por aqui</Title>
@@ -20,8 +17,8 @@ function Login() {
                 name="email"
             />
             <Input
-                type="email"
-                name="email"
+                type="password"
+                name="password"
             />
             <Button>Entrar</Button>
         </Form>
