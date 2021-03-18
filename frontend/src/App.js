@@ -1,10 +1,17 @@
 import React from 'react';
+import { ProviderData } from './components/Context';
 import './global.css';
 
 import Routes from './routes';
 
-export default function App() {
-  return (
-    <Routes/>
-  );
+class App extends React.Component{
+  render(){
+    return(
+      <ProviderData>
+        <Routes/>
+      </ProviderData>
+    );
+  }
 }
+
+export default App;
