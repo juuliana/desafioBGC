@@ -15,6 +15,7 @@ export const Description = styled.h1`
     height: 100px;
     right: 60%;
     top: 30%;
+    text-transform: uppercase;
 
     font-size: 30px;
     line-height: 43px;
