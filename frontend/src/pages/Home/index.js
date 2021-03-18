@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
 import { Header, Description, Image } from './styles';
+
 import minions from '../../images/minions.png';
 import Products from '../Products';
 import Menu from '../../components/Menu';
@@ -8,13 +8,11 @@ import Menu from '../../components/Menu';
 function Home() {
   return (
     <>
-      <Router>
-        <Menu/>
-      </Router>
-
       <Header>
+        <Menu/>
+
         <Description>
-          FAÇA JÁ A RESERVA DO SEU <text style={{color: '#FCE029'}}>BONECO MINIONS</text> EM MINIATURA!
+          Faça já a reserva do seu <text style={{color: 'var(--yellow)'}}>Boneco Minions</text> em miniatura!
         </Description>
 
         <Image src={minions}></Image>
