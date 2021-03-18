@@ -11,7 +11,7 @@ export default function Routes(){
             <Switch>
                 <Route component={Home} path="/" exact/>
                 <Route component={Login} path="/Login"/>
-                <Route component={ShoppingCart} path="/ShoppingCart"/>
+                <Route component={ShoppingCart} path="/ShoppingCart"/>      
             </Switch>
         </BrowserRouter>
     );
