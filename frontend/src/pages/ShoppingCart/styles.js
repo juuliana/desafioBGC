@@ -24,15 +24,18 @@ export const Container = styled.div`
 
     button {
       background: var(--blue);
-      color: #fff;
+      color: var(--white);
       border: 0;
       border-radius: 20px;
       padding: 12px;
       font-weight: bold;
       text-transform: uppercase;
-      transition: var(--blue) 1.0s;
-      &:hover {
-        background: var(--yellow);
+      transition: 0.6s;
+      animation: ease-in-out;
+
+      :hover{
+          transform: scale(0.9);
+          box-shadow: 0 0 10 0;
       }
     }
   }
