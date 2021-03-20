@@ -1,43 +1,48 @@
 import styled from 'styled-components';
+import { NavLink as Link } from 'react-router-dom';
 
 export const Header = styled.div`
     margin: 0;
-    background-color: var(--background);
     min-height: 86.6vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 15px;
 `;
 
 export const Container = styled.div`
   padding: 30px;
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
-  footer {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #333;
-    text-transform: uppercase;
+`;
 
-    button {
-      background: var(--blue);
-      color: var(--white);
-      border: 0;
-      border-radius: 20px;
-      padding: 12px;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: 0.6s;
-      animation: ease-in-out;
+export const Footer = styled.footer`
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+`;
 
-      :hover{
-          transform: scale(0.9);
-          box-shadow: 0 0 10 0;
-      }
-    }
+export const NavLink = styled(Link)`
+  max-width: 100%;
+  padding: 11px 13px;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  background: var(--blue);
+  border: none;
+  text-decoration: none;
+  border-radius: 20px;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.6s;
+  animation: ease-in-out;
+
+  :hover{
+    transform: scale(0.9);
+    box-shadow: 0 0 10 0;
   }
 `;
 
@@ -46,7 +51,6 @@ export const Products = styled.table`
   th {
     color: var(--blue);
     text-transform: uppercase;
-    padding: 10px;
   }
   
   td {
@@ -67,23 +71,18 @@ export const Products = styled.table`
     font-weight: bold;
     color: var(--background);
   }
-  div {
-    display: flex;
-    align-items: center;
+`;
 
-    input {
-      border: 1px solid var(--gray);
-      border-radius: 4px;
-      color: var(--background);
-      padding: 6px;
-      width: 40px;
-    }
-  }
-  button {
-    background: none;
-    border: 0;
-    padding: 6px;
-  }
+export const List = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Button = styled.button`
+  background: none;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
 `;
 
 export const Price = styled.div`
@@ -98,5 +97,4 @@ export const Price = styled.div`
     font-size: 20px;
     margin-left: 10px;
   }
-
 `;
