@@ -9,14 +9,13 @@ export const Header = styled.div`
 `;
 
 export const Description = styled.h1`
-    color: white;
+    color: var(--white);
     position: absolute;
     width: 400px;
     height: 100px;
     right: 60%;
     top: 30%;
     text-transform: uppercase;
-
     font-size: 30px;
     line-height: 43px;
 `;
