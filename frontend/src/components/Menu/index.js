@@ -1,13 +1,17 @@
 import React from 'react';
+import { MdHome, MdShoppingCart } from 'react-icons/md';
 import { Nav, NavLink } from './styles';
 
 export default function Menu(){
     return(
         <Nav>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/Login'>Login</NavLink>
-            <NavLink to='/Register'>Cadastrar</NavLink>
-            <NavLink to='/ShoppingCart'>Carrinho</NavLink>
+            <NavLink to='/'>
+                <MdHome size={40} color= "var(--yellow)"/>
+            </NavLink>
+            
+            <NavLink to='/ShoppingCart'>
+                <MdShoppingCart size={40} color= "var(--white)"/>
+            </NavLink>
         </Nav>
     );
 }
