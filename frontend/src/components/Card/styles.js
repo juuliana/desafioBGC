@@ -6,6 +6,7 @@ export const Container = styled.div`
     width: 250px;
     overflow: hidden;
     border-radius: 20px;
+    border: 5px solid var(--blue);
     transition: 0.5s;
     animation: ease-in-out;
 
@@ -66,19 +67,15 @@ export const Price = styled.h2`
 `;
 
 export const Button = styled.button`
-    background-color: var(--blue);
     display: flex;
+    margin-bottom: 10px;
     justify-content: center;
-    width: 100%;
-    margin: 0.rem;
-    color: white;
-    border: 1px solid var(--blue);
+    align-items: center;
     transition: 0.6s;
     animation: ease-in-out;
-    text-decoration: none;
 
     :hover{
-        transform: scale(1.1);
+        transform: scale(1.5);
         box-shadow: 0 0 10 0;
     }
 `;

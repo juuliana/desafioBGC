@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { MdShoppingCart } from 'react-icons/md';
 import { ContextData } from '../../components/Context';
 import { Container, Header, ProductsGrid, ContainerImage, Image, Information, Title, Description, Button, Price } from './styles';
 
@@ -33,7 +34,9 @@ export class Card extends Component{
                                     </Price>
                                 </Information>
                             
-                                <Button onClick={()=> this.context.addShoppingCart(product.id)} as={Link} to="/ShoppingCart">Adicionar ao carrinho</Button>
+                                <Button onClick={()=> this.context.addShoppingCart(product.id)} as={Link} to="/ShoppingCart">
+                                    <MdShoppingCart size={30} color= "var(--blue)"/>
+                                </Button>
                             </Container>  
                         ))
                     }
