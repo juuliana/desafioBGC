@@ -8,25 +8,25 @@ export class ProviderData extends Component{
             {
                 "id": "1",
                 "title": "Minions Kids",
-                "src": "https://ciadobrinquedo.com/wp-content/uploads/2019/10/minion.png",
-                "description": "O queridinho do momento, garanta já o seu Minions Kids com o seu Ursinho - Tamanho: 5cm ",
+                "src": "https://images-na.ssl-images-amazon.com/images/I/41BtWAoXhUL.jpg",
+                "description": "O queridinho do momento, Minions Kids - Tamanho: 5cm",
                 "price": 15,
                 "count": 1
             },
             {
                 "id": "2",
-                "title": "Minions remoto 2",
-                "src": "https://i.pinimg.com/originals/51/f4/f8/51f4f8d201e1e59997fe465ff585d1cc.png",
-                "description": "Minions remoto 2 - Leve já o seu minions remoto!",
-                "price": 30,
+                "title": "Minions Banana",
+                "src": "https://www.escalaminiaturas.com.br/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/g/m/gmf05_01.jpg",
+                "description": "Minions Banana com acessório - Tamanho: 5cm",
+                "price": 20,
                 "count": 1
             },
             {
                 "id": "3",
-                "title": "Minions Músico",
-                "src": "https://i.pinimg.com/originals/b7/f3/97/b7f397fef0ce46db17a3e728549d41e6.png",
-                "description": "Miniatura do Minions músico, com violão - Tamanho: ",
-                "price": 40,
+                "title": "Minions Vampire",
+                "src": "https://www.nicepng.com/png/detail/324-3243671_villain-pixabay-mcdonalds-2015-minions-talking-minion-vampire.png",
+                "description": "Miniatura do Minions Vampire - Tamanho: 4cm",
+                "price": 10,
                 "count": 1
             }
         ],
@@ -35,13 +35,17 @@ export class ProviderData extends Component{
 
     addShoppingCart = (id) => {
         const {products, shoppingCart} = this.state;
-        const data = products.filter(product => {
-            return product.id === id;
+        const view = shoppingCart.every(item =>{
+            return item.id !== id
         })
-
-        this.setState({
-            shoppingCart: [...shoppingCart, ...data]
-        });
+        if(view){
+            const data = products.filter(product =>{
+                return product.id === id
+            })
+            this.setState({shoppingCart: [...shoppingCart,...data]})
+        }else{
+            alert("Esse produto já foi adicionado ao carrinho!");
+        }
     }
 
     add = id =>{
