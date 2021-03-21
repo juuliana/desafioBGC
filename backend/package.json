@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
