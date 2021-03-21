@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+import { useHistory } from "react-router-dom";
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+import { MdArrowForward } from 'react-icons/md';
 
 import UserPool from '../../UserPool';
 
@@ -9,6 +11,8 @@ import Menu from '../../components/Menu';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const history = useHistory();
 
   const onSubmit = event => {
     event.preventDefault();
@@ -26,7 +30,8 @@ function Login() {
     user.authenticateUser(authDetails, {
       onSuccess: data => {
         console.log('Success:', data);
-        alert("Usuário cadastrado com sucesso!");
+        alert("Usuário logado com sucesso!");
+        history.push('/');
       },
 
       onFailure: err => {
@@ -47,7 +52,7 @@ function Login() {
 
       <Header>
         <Form onSubmit={onSubmit}>
-          <Title to="/Register">Já possui um cadastro?</Title>
+          <Title to="/Register">Faça seu Login</Title>
           <Input
             type="email"
             name="email"
@@ -63,7 +68,10 @@ function Login() {
             placeholder="Digite sua senha"
           />
           <Button type="submit">Acessar e finalizar reserva</Button>
-          <Text to="/Register">Quero me cadastrar</Text>
+          <Text to="/Register">
+            Quero me cadastrar
+            <MdArrowForward size={20} color="var(--white)"/>
+          </Text>
         </Form>
       </Header>
     </>
