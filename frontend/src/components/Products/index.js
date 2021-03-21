@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingCart } from 'react-icons/md';
-import { ContextData } from '../../components/Context';
+import { ContextData } from '../Context';
 import { Container, Header, ProductsGrid, ContainerImage, Image, Information, Title, Description, Button, Price } from './styles';
 
-export class Card extends Component{
+export class Products extends Component{
 
     static contextType = ContextData;
 
@@ -46,4 +46,4 @@ export class Card extends Component{
     }
 }
 
-export default Card;
+export default Products;
