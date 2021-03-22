@@ -8,6 +8,31 @@ import UserPool from '../../UserPool';
 import { Header, Form, Input, Text, Button, Title } from './styles';
 import Menu from '../../components/Menu';
 
+import Amplify from "aws-amplify";
+import { API } from "aws-amplify";
+
+import awsExports from "../../aws-exports";
+Amplify.configure(awsExports);
+
+async function addContact() {
+  const data = {
+    body: {
+      name: formState.name,
+      email: formState.email,
+      message: formState.message
+    }
+  };
+
+  const apiData = await API.post('formapi', '/contact', data);
+  alert('E-mail de Confirmação enviado!');
+}
+
+const formState = { name: '', email: '', message: 'Reserva realizada com sucesso!' };
+
+function updateFormState(key, value) {
+  formState[key] = value;
+}
+
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,18 +54,16 @@ function Login() {
 
     user.authenticateUser(authDetails, {
       onSuccess: data => {
-        console.log('Success:', data);
         alert("Usuário logado com sucesso!");
         history.push('/');
+        addContact();
       },
 
       onFailure: err => {
-        console.error('Failure:', err);
         alert("E-mail e senha incorretos!");
       },
 
       newPasswordRequired: data => {
-        console.log('newPasswordRequired', data);
         alert("Digite uma senha válida");
       }
     });
@@ -57,7 +80,7 @@ function Login() {
             type="email"
             name="email"
             value={email}
-            onChange={event => setEmail(event.target.value)}
+            onChange={(event => setEmail(event.target.value))}
             placeholder="Digite seu e-mail"       
           />
           <Input
@@ -67,7 +90,12 @@ function Login() {
             onChange={event => setPassword(event.target.value)}
             placeholder="Digite sua senha"
           />
-          <Button type="submit">Acessar e finalizar reserva</Button>
+          <Input placeholder="Digite seu nome" onChange={e => updateFormState('name', e.target.value)} />
+          <Input placeholder="Digite um email para confirmação" onChange={e => updateFormState('email', e.target.value)} />
+      
+          <Button type="submit">
+            Acessar e finalizar reserva
+          </Button>
           <Text to="/Register">
             Quero me cadastrar
             <MdArrowForward size={20} color="var(--white)"/>
