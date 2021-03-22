@@ -24,6 +24,7 @@ async function addContact() {
   };
 
   const apiData = await API.post('formapi', '/contact', data);
+  console.log({ apiData });
   alert('E-mail de Confirmação enviado!');
 }
 
