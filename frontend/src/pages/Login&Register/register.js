@@ -17,7 +17,6 @@ function Register() {
 
     UserPool.signUp(email, password, [], null, (err, data) =>{
       if (err) console.error(err);
-      console.log(data);
       history.push('/Login');
     });
   };
