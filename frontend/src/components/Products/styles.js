@@ -26,9 +26,10 @@ export const Header = styled.div`
 export const ProductsGrid = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-self: center;
     max-width: 1500px;
     padding: 50px;
-    margin-left: 5%;
     grid-gap: 20px;
 `;
 
@@ -36,7 +37,6 @@ export const ContainerImage = styled.div`
     overflow: hidden;
     height: 250px;
 `;
-
 
 export const Image = styled.img`
     max-width: 250px;

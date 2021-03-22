@@ -22,8 +22,8 @@ export const Description = styled.h1`
 
 export const Image = styled.img`
     position: absolute;
-    width: 550px;
-    height: 329px;
+    width: 600px;
+    height: 350px;
     left: 50%;
     top: 40%;
 `;
