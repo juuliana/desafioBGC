@@ -7,24 +7,24 @@ export class ProviderData extends Component{
         products: [
             {
                 "id": "1",
-                "title": "Minions Kids",
-                "src": "https://images-na.ssl-images-amazon.com/images/I/41BtWAoXhUL.jpg",
-                "description": "O queridinho do momento, Minions Kids - Tamanho: 5cm",
+                "title": "Minions Músico",
+                "src": "https://www.imagenspng.com.br/wp-content/uploads/2015/07/minions-05-violao.png",
+                "description": "O queridinho do momento, Minions Músico - Tamanho: 5cm",
                 "price": 15,
                 "count": 1
             },
             {
                 "id": "2",
-                "title": "Minions Banana",
-                "src": "https://www.escalaminiaturas.com.br/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/g/m/gmf05_01.jpg",
-                "description": "Minions Banana com acessório - Tamanho: 5cm",
+                "title": "Minions da Felicidade",
+                "src": "https://www.imagenspng.com.br/wp-content/uploads/2015/07/minions-31.png",
+                "description": "Minions da Felicidade - Tamanho: 5cm",
                 "price": 20,
                 "count": 1
             },
             {
                 "id": "3",
                 "title": "Minions Vampire",
-                "src": "https://www.nicepng.com/png/detail/324-3243671_villain-pixabay-mcdonalds-2015-minions-talking-minion-vampire.png",
+                "src": "https://archive.org/download/minions_193/minions-21-vampiro.png",
                 "description": "Miniatura do Minions Vampire - Tamanho: 4cm",
                 "price": 10,
                 "count": 1
