@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Header = styled.div`
@@ -28,7 +29,7 @@ export const Input = styled.input`
     margin-bottom: 1.6rem;
     border-radius: 4px;
     outline: 0;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     font-size: 14px;
 `;
 
@@ -40,7 +41,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     background: var(--blue);
     border: none;
-    border-radius: 3px;
+    border-radius: 20px;
     outline: 0;
     cursor: pointer;
     transition: 0.6s;
@@ -50,4 +51,27 @@ export const Button = styled.button`
         transform: scale(0.9);
         box-shadow: 0 0 10 0;
     }
+`;
+
+export const Text = styled(Link)`
+    display: flex;
+    color: var(--white);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+`;
+
+export const Title = styled.h1`
+    display: flex;
+    color: var(--yellow);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 43px;
 `;
