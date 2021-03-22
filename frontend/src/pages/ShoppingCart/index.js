@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ContextData } from '../../components/Context';
-import { Container, Header, Footer, NavLink, Products, List, Button, Price } from './styles';
+import { Container, Header, Footer, NavLink, Products, List, Button, Text } from './styles';
 
 import { MdRemoveCircle, MdAddCircle, MdRemoveShoppingCart} from 'react-icons/md';
 
@@ -11,7 +11,6 @@ export class ShoppingCart extends Component {
 
     render(){
         const {shoppingCart, removeShoppingCart, add, remove} = this.context;
-
         return (  
             <>
                 <Menu/>
@@ -53,11 +52,12 @@ export class ShoppingCart extends Component {
                                 ))
                             }
                             <Footer>
-                                <Price>
-                                    <span>Valor Total</span>
-                                    <strong>R$</strong>
-                                </Price>
-                                <NavLink to="/Login" type="button">Quero reservar</NavLink>
+                                <Text>
+                                    <span>Deseja confirmar?</span>
+                                </Text>
+                                <NavLink to="/Login" type="button">
+                                    Quero reservar
+                                </NavLink>
                             </Footer>
                         </Products>
                     </Container>
@@ -65,7 +65,6 @@ export class ShoppingCart extends Component {
             </>
         );
     }
- 
 }
 
 export default ShoppingCart;

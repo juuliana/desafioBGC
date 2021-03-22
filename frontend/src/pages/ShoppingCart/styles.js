@@ -85,16 +85,11 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const Price = styled.div`
+export const Text = styled.h1`
   display: flex;
 
   span {
     font-weight: bold;
     color: var(--blue);
-  }
-
-  strong {
-    font-size: 20px;
-    margin-left: 10px;
   }
 `;
