@@ -1,6 +1,7 @@
 <h1 align='center'>Reserva de Minions em Miniatura - Desafio BGC Brasil</h1>
 
-![Minions]()
+![Minions](https://github.com/juuliana/desafioBGC/blob/main/frontend/src/images/home.jpeg)
+![Products](https://github.com/juuliana/desafioBGC/blob/main/frontend/src/images/products.jpeg)
 
 <h3 align="center">Descritivo:</h3>
 <p align="center">
@@ -22,6 +23,8 @@
     <li><a href="https://aws.amazon.com/pt/ses/" target="_blank">Amazon Simple Email Service</a></li>
     <li><a href="https://aws.amazon.com/pt/amplify/" target="_blank">AWS Amplify</a></li>
 </ul>
+
+![Cart](https://github.com/juuliana/desafioBGC/blob/main/frontend/src/images/shoppingCart.jpeg)
 
 <h2 align='center'>Criado por:</h2>
 <p align='center'>
